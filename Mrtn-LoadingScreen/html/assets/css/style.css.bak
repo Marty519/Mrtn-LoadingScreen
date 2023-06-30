@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'GothamPro';
+    src: url('../fonts/GothamPro.woff2') format('woff2');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800;900&display=swap');
+
+body {
+    overflow: hidden;
+    background-color: #111845;
+}
+
+body > img {
+    background-size: cover;
+    opacity: 80%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+svg {
+    position: absolute;
+    top: 80px;
+    left: -208px;
+    width: 600px;
+}
+
+svg > text{
+    font-family: 'Poppins', sans-serif;
+    font-size:30px;
+    font-weight:900;
+    stroke-width:1px;
+    fill:transparent;
+    stroke:#00E4E4;
+    letter-spacing:4px;
+    animation:effect 6s infinite alternate;
+}
+
+@keyframes effect{
+    0%{
+      stroke-dasharray:0 70%;
+    }
+    100%{
+      stroke-dasharray:10% 0%;
+      stroke-dashoffset:20%;
+      text-shadow:0px 0px 20px #00E4E4, 0px 0px 40px #00E4E4, 0px 0px 60px #00E4E4, 0px 0px 80px #00E4E4, 0px 0px 100px #00E4E4;
+    }
+}
+
+.loadingContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+}
+
+.server-logo {
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%, -50%);
+    height: 210px;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(10px 5px 3px #000000);
+}
+
+.text-box {
+    position: absolute;
+    top: 40px;
+    left: -300px;
+    font-size: 24px;
+    color: white;
+    font-family: 'GothamPro';
+    text-align: center;
+    width: 600px;
+}
+
+
+#loadingMessage {
+    margin-top: 60px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    filter: drop-shadow(10px 5px 3px #000000); 
+}
+
+#bgCreatorMessage {
+    margin-top: 180px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    opacity: 40%;
+    filter: drop-shadow(10px 5px 3px #000000);  
+}
+
+#player,
+#playeri { display: none; }
+
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
